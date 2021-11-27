@@ -1,0 +1,16 @@
+
+	processor	16C73B
+	#include	P16C73B.INC
+	#include "timers.inc"
+	#include "upstruct.inc"
+#define	IN_PHRASES
+	#include "phrases.inc"
+
+RAM2	UDATA	
+phraseptr	res	1
+phrasenum	res	1
+	global	phraseptr
+	global	phrasenum
+
+
+

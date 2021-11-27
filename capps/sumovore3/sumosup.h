@@ -1,0 +1,65 @@
+#ifndef SUMOSUP_H
+#define SUMOSUP_H
+#include "types.h"
+
+void initSumo();
+void setLed(UInt8, UInt8);		
+void clearLeds();
+void checkIr();
+void initPwm();
+void motorSpeed(UInt16,UInt8);
+#define LEFT_MOTOR		0
+#define RIGHT_MOTOR		1
+
+#define IRL 0
+#define IRR 1
+#define IRM	2
+UInt8	irOn(UInt8);
+void initIr();
+
+#define LED0 RD0
+#define LED1 RD1
+#define LED2 RD2
+#define LED3 RD3
+#define LED4 RD4
+
+#define FORWARD	1
+#define BACKWARD 0
+
+#define LEFT_MOTOR_DIR	RC3
+#define RIGHT_MOTOR_DIR	RC4
+
+#define LEFT_MOTOR_FORWARD	LEFT_MOTOR_DIR=FORWARD;LED3=FORWARD
+#define LEFT_MOTOR_BACKWARD	LEFT_MOTOR_DIR=BACKWARD;LED3=BACKWARD
+#define RIGHT_MOTOR_FORWARD	RIGHT_MOTOR_DIR=FORWARD;LED4=FORWARD
+#define RIGHT_MOTOR_BACKWARD RIGHT_MOTOR_DIR=BACKWARD;LED4=BACKWARD
+
+
+#define SUMO_FORWARD \
+	LEFT_MOTOR_FORWARD; \
+	RIGHT_MOTOR_FORWARD
+
+#define SUMO_BACKWARD \
+	LEFT_MOTOR_BACKWARD; \
+	RIGHT_MOTOR_BACKWARD
+
+#define SUMO_ROTATE_LEFT \
+	LEFT_MOTOR_BACKWARD; \
+	RIGHT_MOTOR_FORWARD 
+
+#define SUMO_ROTATE_RIGHT \
+	RIGHT_MOTOR_BACKWARD; \
+	LEFT_MOTOR_FORWARD 
+
+
+#define IR_MID		RA4
+#define IR_LEFT		RD5
+#define IR_RIGHT	RD6
+
+#define SLOWEST_SPEED	(UInt16)0x160
+#define FASTEST_SPEED	(UInt16)0x3FF
+#define MEDIUM_SPEED	(UInt16)((SLOWEST_SPEED+FASTEST_SPEED)/2)
+
+
+	
+#endif

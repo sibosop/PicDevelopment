@@ -1,0 +1,163 @@
+;**********************************************************************
+;   This file is a basic code template for object module code         *
+;   generation on the PICmicro PIC16C73B. This file contains the      *
+;   basic code building blocks to build upon.  As a project minimum   *
+;   the 16c63.lkr file will also be required for this file to         *
+;   correctly build. The .lkr files are located in the MPLAB          *  
+;   directory.                                                        *
+;                                                                     *
+;   If interrupts are not used all code presented between the         *
+;   code section "INT_VECTOR" and code section "MAIN" can be removed. *
+;   In addition the variable assignments for 'w_temp', 'status_temp'  *
+;   and 'w_temp1' can be removed.                                     *                                                        *                         
+;                                                                     *
+;	If interrupts are used, as in this template file, the 16c63.lkr   *
+;   file will need to be modified. Refer to the readme.tmp file for   *
+;   this information.                                                 *
+;                                                                     *
+;   Refer to the MPASM User's Guide for additional information on     *
+;   features of the assembler and linker (Document DS33014F).         *
+;                                                                     *
+;   Refer to the respective PICmicro data sheet for additional        *
+;   information on the instruction set.                               *
+;                                                                     *
+;   Template file built using MPLAB V3.99.18 with MPASM V2.15.06 and  *
+;   MPLINK 1.10.11 as the language tools.                             *
+;                                                                     *
+;**********************************************************************
+;                                                                     *
+;    Filename:	    xxx.asm                                           *
+;    Date:                                                            *
+;    File Version:                                                    *
+;                                                                     *
+;    Author:                                                          *
+;    Company:                                                         *
+;                                                                     * 
+;                                                                     *
+;**********************************************************************
+;                                                                     *
+;    Files required:                                                  *
+;                                                                     *
+;                                                                     *
+;                                                                     *
+;**********************************************************************
+;                                                                     *
+;    Notes:                                                           *
+;                                                                     *
+;                                                                     *
+;                                                                     *
+;                                                                     *
+;**********************************************************************
+
+
+	list      p=16c73b            ; list directive to define processor
+	#include <p16c73b.inc>        ; processor specific variable definitions
+	#include "../shared/macros.inc"
+	
+	__CONFIG   _CP_OFF & _WDT_ON & _BODEN_ON & _PWRTE_ON & _RC_OSC
+
+; '__CONFIG' directive is used to embed configuration data within .asm file.
+; The labels following the directive are located in the respective .inc file.
+; See respective data sheet for additional information on configuration word.
+
+
+
+
+
+DUMMY_VAR	UDATA     0xA0
+w_temp1		RES     1	; GPR place holder for context saving
+				; w_temp is reserved at 0x20 then GPR
+				; 0xA0 must be reserved as well (interrupts) 
+test equ 0
+
+
+
+
+
+;**********************************************************************
+		CODE          ; processor reset vector
+        movlw   high  start       ;
+        movwf   PCLATH            ; initialize PCLATH
+		goto    start             ; go to beginning of program
+		nop
+
+interrupt
+		movwf   w_temp            ; save off current W register contents
+		movf	STATUS,w          ; move status register into W register
+		bcf     STATUS,RP0        ; ensure file register bank set to 0
+		movwf	status_temp       ; save off contents of STATUS register
+
+
+; isr code can go here or be located as a call subroutine elsewhere
+		bcf	STATUS,5
+		bcf	INTCON,T0IF
+		incf	precnt,f
+		btfss	STATUS,Z
+		goto	notYet
+		bsf	state,ALARM
+notYet
+
+
+		bcf     STATUS,RP0        ; ensure file register bank set to 0
+		movf    status_temp,w     ; retrieve copy of STATUS register
+		movwf	STATUS            ; restore pre-isr STATUS register contents
+		swapf   w_temp,f
+		swapf   w_temp,w          ; restore pre-isr W register contents
+		retfie                    ; return from interrupt
+
+
+
+start
+		bsf	STATUS,RP0	; page 1
+		clrf	PORTB		; make b outputs
+		movlw	0x7		; divide by 256
+		movwf	TMR0
+		bcf	STATUS,RP0	; page 0
+		clrf	state
+		clrf	cntr
+		clrf	precnt
+		clrf	TMR0		
+		movlw	0xA0
+		movwf	INTCON
+loop
+		btfss	state,ALARM
+		goto	loop
+		disable	
+		bcf	state,ALARM
+		enable	
+		incf	cntr,f
+		movf	cntr,w
+		andlw	0x0f
+	    	call	setdigit
+		disable	
+		movwf	PORTB
+		enable	
+		goto	loop
+
+setdigit
+		addwf	PCL,f		; add cntr to pc value
+		retlw	0x3f
+		retlw	0x06
+		retlw	0x5b
+		retlw	0x4f
+		retlw	0x66
+		retlw	0x6d	
+		retlw	0x7d	
+		retlw	0x07
+		retlw	0x7f
+		retlw	0x6f
+		retlw	0x77
+		retlw	0x7c
+		retlw	0x39
+		retlw	0x5e
+		retlw	0x79
+		retlw	0x71
+		
+
+	
+
+
+
+
+		END                      ; directive 'end of program'
+

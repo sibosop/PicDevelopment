@@ -1,0 +1,55 @@
+
+#include <pic.h>
+#include <sys.h>
+#include "interrupt.h"
+#include "serial.h"
+
+extern void zeroCross();
+extern void checkDimCounter();
+
+UInt8 milli;
+UInt8 kcount;
+
+
+void interrupt 
+interruptHandler()
+{
+	// test timer 0 interrupt
+	if ( T0IF )
+	{
+		T0IF = 0;
+		TMR0 = millitCount;
+		if ( !(--milli) )
+		{
+			milli = milliCount;
+			checkDimCounter();
+			if ( ++kcount > 20 )
+			{
+				oneKhz = 1;
+				kcount = 0;
+			}
+		}
+	}
+	if ( INTF )
+	{
+		INTF = 0;
+		pinInt = 1;
+		zeroCross();
+	}
+	checkTransmit();
+	checkReceive();
+}
+
+void
+initInterrupt(UInt8 rb0Flag,UInt8 timerFlag)
+{
+	kcount = 0;
+	if ( timerFlag )
+	{
+		milli = milliCount;
+		T0IE = 1;	// enable timer 0 interrupt
+	}
+	if ( rb0Flag ) INTE = 1;
+	
+	
+}

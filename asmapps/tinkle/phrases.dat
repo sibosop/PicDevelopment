@@ -1,0 +1,91 @@
+
+#comment
+preamble phrases.pre
+
+phrase
+C1+ 	7	quart 	nowait 
+C1 	1	8th	nowait
+end
+
+phrase
+E	1	16th3	nowait
+F	2	16th3	nowait
+F+	4	16th3	nowait
+B	7	quart	nowait
+B-	5	8th	8th
+end
+
+phrase
+C	1	16th3	nowait
+C	2	16th3	nowait
+C	3	16th3	nowait
+choose	4	16th	nowait
+A+	4	8th	nowait
+G	3	quart	nowait
+F	1	16th	nowait
+end
+
+phrase
+G	4	8th3	nowait
+choose	4	8th3	nowait
+B-	4	8th3	nowait
+C1	7	quart	nowait
+B	3	8th	nowait
+end
+
+phrase
+A	5	16th3	nowait
+A-	3	16th3	nowait
+E-	3	16th3	nowait
+A	5	16th3	nowait
+A-	3	16th3	nowait
+choose	3	16th3	nowait
+A	5	16th3	nowait
+A-	3	16th3	nowait
+E-	3	16th3	nowait
+C	7	8th	8th
+end
+
+phrase
+C	5	16th3	nowait
+choose	1	16th3	nowait
+D	5	16th3	nowait
+choose	1	16th3	nowait
+E-	5	16th3	nowait
+choose	1	16th3	nowait
+F	5	16th3	nowait
+F+	1	16th3	nowait
+G	5	16th3	nowait
+choose	1	16th3	nowait
+B	5	16th3	nowait
+choose	1	16th3	nowait
+B	7	16th3	nowait
+choose	7	quart	nowait
+C+	1	half	nowait
+end
+
+
+phrase
+C1+	4	16th3	nowait
+C	3	16th3	nowait
+C1+	4	16th3	nowait
+C	3	16th3	nowait
+C1+	4	16th3	nowait
+C	3	16th3	nowait
+C1+	4	16th3	nowait
+C1	3	16th3	nowait
+C+	4	16th3	nowait
+C1	3	16th3	nowait
+D	2	8th3	nowait
+end
+
+phrase
+G	4	half	nowait
+A-	1	half	half
+end
+
+
+
+
+
+

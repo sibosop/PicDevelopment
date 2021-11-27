@@ -1,0 +1,361 @@
+Version 4.0 HI-TECH Software Intermediate Code
+"2218 /Applications/microchip/mplabx/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8/pic/include/proc/pic16f876.h
+[; ;/Applications/microchip/mplabx/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8/pic/include/proc/pic16f876.h: 2218: extern volatile __bit RA4 __attribute__((address(0x2C)));
+[v _RA4 `Vb ~T0 @X0 0 e@44 ]
+"35 ../rtclock.h
+[; ;../rtclock.h: 35: void rtcStop();
+[v _rtcStop `(v ~T0 @X0 0 e? ]
+"38
+[; ;../rtclock.h: 38: void rtcBumpMin();
+[v _rtcBumpMin `(v ~T0 @X0 0 e? ]
+"45
+[; ;../rtclock.h: 45: void rtcClearSec();
+[v _rtcClearSec `(v ~T0 @X0 0 e? ]
+"29 ../nixie74141.h
+[; ;../nixie74141.h: 29: extern void setSeconds();
+[v _setSeconds `(v ~T0 @X0 0 e? ]
+"28
+[; ;../nixie74141.h: 28: extern void setMinutes();
+[v _setMinutes `(v ~T0 @X0 0 e? ]
+"33
+[; ;../nixie74141.h: 33: extern void displaySeconds();
+[v _displaySeconds `(v ~T0 @X0 0 e? ]
+"32
+[; ;../nixie74141.h: 32: extern void displayMinutes();
+[v _displayMinutes `(v ~T0 @X0 0 e? ]
+"2221 /Applications/microchip/mplabx/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8/pic/include/proc/pic16f876.h
+[; ;/Applications/microchip/mplabx/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8/pic/include/proc/pic16f876.h: 2221: extern volatile __bit RA5 __attribute__((address(0x2D)));
+[v _RA5 `Vb ~T0 @X0 0 e@45 ]
+"39 ../rtclock.h
+[; ;../rtclock.h: 39: void rtcBumpHour();
+[v _rtcBumpHour `(v ~T0 @X0 0 e? ]
+"30 ../nixie74141.h
+[; ;../nixie74141.h: 30: extern void setHours();
+[v _setHours `(v ~T0 @X0 0 e? ]
+"31
+[; ;../nixie74141.h: 31: extern void displayHours();
+[v _displayHours `(v ~T0 @X0 0 e? ]
+"2446 /Applications/microchip/mplabx/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8/pic/include/proc/pic16f876.h
+[; ;/Applications/microchip/mplabx/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8/pic/include/proc/pic16f876.h: 2446: extern volatile __bit TRISA4 __attribute__((address(0x42C)));
+[v _TRISA4 `Vb ~T0 @X0 0 e@1068 ]
+"2449
+[; ;/Applications/microchip/mplabx/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8/pic/include/proc/pic16f876.h: 2449: extern volatile __bit TRISA5 __attribute__((address(0x42D)));
+[v _TRISA5 `Vb ~T0 @X0 0 e@1069 ]
+"2440
+[; ;/Applications/microchip/mplabx/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8/pic/include/proc/pic16f876.h: 2440: extern volatile __bit TRISA2 __attribute__((address(0x42A)));
+[v _TRISA2 `Vb ~T0 @X0 0 e@1066 ]
+"54 /Applications/microchip/mplabx/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8/pic/include/proc/pic16f876.h
+[; ;/Applications/microchip/mplabx/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8/pic/include/proc/pic16f876.h: 54: __asm("INDF equ 00h");
+[; <" INDF equ 00h ;# ">
+"61
+[; ;/Applications/microchip/mplabx/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8/pic/include/proc/pic16f876.h: 61: __asm("TMR0 equ 01h");
+[; <" TMR0 equ 01h ;# ">
+"68
+[; ;/Applications/microchip/mplabx/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8/pic/include/proc/pic16f876.h: 68: __asm("PCL equ 02h");
+[; <" PCL equ 02h ;# ">
+"75
+[; ;/Applications/microchip/mplabx/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8/pic/include/proc/pic16f876.h: 75: __asm("STATUS equ 03h");
+[; <" STATUS equ 03h ;# ">
+"161
+[; ;/Applications/microchip/mplabx/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8/pic/include/proc/pic16f876.h: 161: __asm("FSR equ 04h");
+[; <" FSR equ 04h ;# ">
+"168
+[; ;/Applications/microchip/mplabx/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8/pic/include/proc/pic16f876.h: 168: __asm("PORTA equ 05h");
+[; <" PORTA equ 05h ;# ">
+"218
+[; ;/Applications/microchip/mplabx/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8/pic/include/proc/pic16f876.h: 218: __asm("PORTB equ 06h");
+[; <" PORTB equ 06h ;# ">
+"280
+[; ;/Applications/microchip/mplabx/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8/pic/include/proc/pic16f876.h: 280: __asm("PORTC equ 07h");
+[; <" PORTC equ 07h ;# ">
+"342
+[; ;/Applications/microchip/mplabx/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8/pic/include/proc/pic16f876.h: 342: __asm("PCLATH equ 0Ah");
+[; <" PCLATH equ 0Ah ;# ">
+"362
+[; ;/Applications/microchip/mplabx/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8/pic/include/proc/pic16f876.h: 362: __asm("INTCON equ 0Bh");
+[; <" INTCON equ 0Bh ;# ">
+"440
+[; ;/Applications/microchip/mplabx/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8/pic/include/proc/pic16f876.h: 440: __asm("PIR1 equ 0Ch");
+[; <" PIR1 equ 0Ch ;# ">
+"496
+[; ;/Applications/microchip/mplabx/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8/pic/include/proc/pic16f876.h: 496: __asm("PIR2 equ 0Dh");
+[; <" PIR2 equ 0Dh ;# ">
+"529
+[; ;/Applications/microchip/mplabx/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8/pic/include/proc/pic16f876.h: 529: __asm("TMR1 equ 0Eh");
+[; <" TMR1 equ 0Eh ;# ">
+"536
+[; ;/Applications/microchip/mplabx/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8/pic/include/proc/pic16f876.h: 536: __asm("TMR1L equ 0Eh");
+[; <" TMR1L equ 0Eh ;# ">
+"543
+[; ;/Applications/microchip/mplabx/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8/pic/include/proc/pic16f876.h: 543: __asm("TMR1H equ 0Fh");
+[; <" TMR1H equ 0Fh ;# ">
+"550
+[; ;/Applications/microchip/mplabx/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8/pic/include/proc/pic16f876.h: 550: __asm("T1CON equ 010h");
+[; <" T1CON equ 010h ;# ">
+"627
+[; ;/Applications/microchip/mplabx/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8/pic/include/proc/pic16f876.h: 627: __asm("TMR2 equ 011h");
+[; <" TMR2 equ 011h ;# ">
+"634
+[; ;/Applications/microchip/mplabx/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8/pic/include/proc/pic16f876.h: 634: __asm("T2CON equ 012h");
+[; <" T2CON equ 012h ;# ">
+"705
+[; ;/Applications/microchip/mplabx/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8/pic/include/proc/pic16f876.h: 705: __asm("SSPBUF equ 013h");
+[; <" SSPBUF equ 013h ;# ">
+"712
+[; ;/Applications/microchip/mplabx/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8/pic/include/proc/pic16f876.h: 712: __asm("SSPCON equ 014h");
+[; <" SSPCON equ 014h ;# ">
+"782
+[; ;/Applications/microchip/mplabx/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8/pic/include/proc/pic16f876.h: 782: __asm("CCPR1 equ 015h");
+[; <" CCPR1 equ 015h ;# ">
+"789
+[; ;/Applications/microchip/mplabx/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8/pic/include/proc/pic16f876.h: 789: __asm("CCPR1L equ 015h");
+[; <" CCPR1L equ 015h ;# ">
+"796
+[; ;/Applications/microchip/mplabx/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8/pic/include/proc/pic16f876.h: 796: __asm("CCPR1H equ 016h");
+[; <" CCPR1H equ 016h ;# ">
+"803
+[; ;/Applications/microchip/mplabx/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8/pic/include/proc/pic16f876.h: 803: __asm("CCP1CON equ 017h");
+[; <" CCP1CON equ 017h ;# ">
+"861
+[; ;/Applications/microchip/mplabx/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8/pic/include/proc/pic16f876.h: 861: __asm("RCSTA equ 018h");
+[; <" RCSTA equ 018h ;# ">
+"956
+[; ;/Applications/microchip/mplabx/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8/pic/include/proc/pic16f876.h: 956: __asm("TXREG equ 019h");
+[; <" TXREG equ 019h ;# ">
+"963
+[; ;/Applications/microchip/mplabx/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8/pic/include/proc/pic16f876.h: 963: __asm("RCREG equ 01Ah");
+[; <" RCREG equ 01Ah ;# ">
+"970
+[; ;/Applications/microchip/mplabx/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8/pic/include/proc/pic16f876.h: 970: __asm("CCPR2 equ 01Bh");
+[; <" CCPR2 equ 01Bh ;# ">
+"977
+[; ;/Applications/microchip/mplabx/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8/pic/include/proc/pic16f876.h: 977: __asm("CCPR2L equ 01Bh");
+[; <" CCPR2L equ 01Bh ;# ">
+"984
+[; ;/Applications/microchip/mplabx/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8/pic/include/proc/pic16f876.h: 984: __asm("CCPR2H equ 01Ch");
+[; <" CCPR2H equ 01Ch ;# ">
+"991
+[; ;/Applications/microchip/mplabx/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8/pic/include/proc/pic16f876.h: 991: __asm("CCP2CON equ 01Dh");
+[; <" CCP2CON equ 01Dh ;# ">
+"1049
+[; ;/Applications/microchip/mplabx/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8/pic/include/proc/pic16f876.h: 1049: __asm("ADRESH equ 01Eh");
+[; <" ADRESH equ 01Eh ;# ">
+"1056
+[; ;/Applications/microchip/mplabx/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8/pic/include/proc/pic16f876.h: 1056: __asm("ADCON0 equ 01Fh");
+[; <" ADCON0 equ 01Fh ;# ">
+"1152
+[; ;/Applications/microchip/mplabx/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8/pic/include/proc/pic16f876.h: 1152: __asm("OPTION_REG equ 081h");
+[; <" OPTION_REG equ 081h ;# ">
+"1222
+[; ;/Applications/microchip/mplabx/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8/pic/include/proc/pic16f876.h: 1222: __asm("TRISA equ 085h");
+[; <" TRISA equ 085h ;# ">
+"1272
+[; ;/Applications/microchip/mplabx/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8/pic/include/proc/pic16f876.h: 1272: __asm("TRISB equ 086h");
+[; <" TRISB equ 086h ;# ">
+"1334
+[; ;/Applications/microchip/mplabx/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8/pic/include/proc/pic16f876.h: 1334: __asm("TRISC equ 087h");
+[; <" TRISC equ 087h ;# ">
+"1396
+[; ;/Applications/microchip/mplabx/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8/pic/include/proc/pic16f876.h: 1396: __asm("PIE1 equ 08Ch");
+[; <" PIE1 equ 08Ch ;# ">
+"1452
+[; ;/Applications/microchip/mplabx/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8/pic/include/proc/pic16f876.h: 1452: __asm("PIE2 equ 08Dh");
+[; <" PIE2 equ 08Dh ;# ">
+"1485
+[; ;/Applications/microchip/mplabx/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8/pic/include/proc/pic16f876.h: 1485: __asm("PCON equ 08Eh");
+[; <" PCON equ 08Eh ;# ">
+"1519
+[; ;/Applications/microchip/mplabx/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8/pic/include/proc/pic16f876.h: 1519: __asm("SSPCON2 equ 091h");
+[; <" SSPCON2 equ 091h ;# ">
+"1581
+[; ;/Applications/microchip/mplabx/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8/pic/include/proc/pic16f876.h: 1581: __asm("PR2 equ 092h");
+[; <" PR2 equ 092h ;# ">
+"1588
+[; ;/Applications/microchip/mplabx/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8/pic/include/proc/pic16f876.h: 1588: __asm("SSPADD equ 093h");
+[; <" SSPADD equ 093h ;# ">
+"1595
+[; ;/Applications/microchip/mplabx/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8/pic/include/proc/pic16f876.h: 1595: __asm("SSPSTAT equ 094h");
+[; <" SSPSTAT equ 094h ;# ">
+"1764
+[; ;/Applications/microchip/mplabx/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8/pic/include/proc/pic16f876.h: 1764: __asm("TXSTA equ 098h");
+[; <" TXSTA equ 098h ;# ">
+"1845
+[; ;/Applications/microchip/mplabx/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8/pic/include/proc/pic16f876.h: 1845: __asm("SPBRG equ 099h");
+[; <" SPBRG equ 099h ;# ">
+"1852
+[; ;/Applications/microchip/mplabx/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8/pic/include/proc/pic16f876.h: 1852: __asm("ADRESL equ 09Eh");
+[; <" ADRESL equ 09Eh ;# ">
+"1859
+[; ;/Applications/microchip/mplabx/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8/pic/include/proc/pic16f876.h: 1859: __asm("ADCON1 equ 09Fh");
+[; <" ADCON1 equ 09Fh ;# ">
+"1912
+[; ;/Applications/microchip/mplabx/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8/pic/include/proc/pic16f876.h: 1912: __asm("EEDATA equ 010Ch");
+[; <" EEDATA equ 010Ch ;# ">
+"1919
+[; ;/Applications/microchip/mplabx/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8/pic/include/proc/pic16f876.h: 1919: __asm("EEADR equ 010Dh");
+[; <" EEADR equ 010Dh ;# ">
+"1926
+[; ;/Applications/microchip/mplabx/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8/pic/include/proc/pic16f876.h: 1926: __asm("EEDATH equ 010Eh");
+[; <" EEDATH equ 010Eh ;# ">
+"1933
+[; ;/Applications/microchip/mplabx/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8/pic/include/proc/pic16f876.h: 1933: __asm("EEADRH equ 010Fh");
+[; <" EEADRH equ 010Fh ;# ">
+"1940
+[; ;/Applications/microchip/mplabx/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8/pic/include/proc/pic16f876.h: 1940: __asm("EECON1 equ 018Ch");
+[; <" EECON1 equ 018Ch ;# ">
+"1985
+[; ;/Applications/microchip/mplabx/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8/pic/include/proc/pic16f876.h: 1985: __asm("EECON2 equ 018Dh");
+[; <" EECON2 equ 018Dh ;# ">
+"7 ../rtcbutton.c
+[; ;../rtcbutton.c: 7: uint8_t lowerTimer;
+[v _lowerTimer `uc ~T0 @X0 1 e ]
+"8
+[; ;../rtcbutton.c: 8: uint8_t upperTimer;
+[v _upperTimer `uc ~T0 @X0 1 e ]
+"9
+[; ;../rtcbutton.c: 9: uint8_t modeTimer;
+[v _modeTimer `uc ~T0 @X0 1 e ]
+"10
+[; ;../rtcbutton.c: 10: uint8_t lowCount;
+[v _lowCount `uc ~T0 @X0 1 e ]
+"18
+[; ;../rtcbutton.c: 18: checkButtons() {
+[v _checkButtons `(v ~T0 @X0 1 ef ]
+{
+[e :U _checkButtons ]
+[f ]
+"19
+[; ;../rtcbutton.c: 19:  if ( !RA4 ) {
+[e $ ! ! _RA4 83  ]
+{
+"20
+[; ;../rtcbutton.c: 20:   if ( !--lowerTimer ) {
+[e $ ! ! != -> =- _lowerTimer -> -> 1 `i `uc `i -> 0 `i 84  ]
+{
+"21
+[; ;../rtcbutton.c: 21:    rtcStop();
+[e ( _rtcStop ..  ]
+"22
+[; ;../rtcbutton.c: 22:    if ( lowCount < 5 ) {
+[e $ ! < -> _lowCount `i -> 5 `i 85  ]
+{
+"23
+[; ;../rtcbutton.c: 23:     ++lowCount;
+[e =+ _lowCount -> -> 1 `i `uc ]
+"24
+[; ;../rtcbutton.c: 24:     lowerTimer = 150;
+[e = _lowerTimer -> -> 150 `i `uc ]
+"25
+[; ;../rtcbutton.c: 25:    } else {
+}
+[e $U 86  ]
+[e :U 85 ]
+{
+"26
+[; ;../rtcbutton.c: 26:     lowerTimer = 75;
+[e = _lowerTimer -> -> 75 `i `uc ]
+"27
+[; ;../rtcbutton.c: 27:    }
+}
+[e :U 86 ]
+"28
+[; ;../rtcbutton.c: 28:    rtcBumpMin();
+[e ( _rtcBumpMin ..  ]
+"29
+[; ;../rtcbutton.c: 29:    rtcClearSec();
+[e ( _rtcClearSec ..  ]
+"30
+[; ;../rtcbutton.c: 30:    setSeconds();
+[e ( _setSeconds ..  ]
+"31
+[; ;../rtcbutton.c: 31:    setMinutes();
+[e ( _setMinutes ..  ]
+"32
+[; ;../rtcbutton.c: 32:    displaySeconds();
+[e ( _displaySeconds ..  ]
+"33
+[; ;../rtcbutton.c: 33:    displayMinutes();
+[e ( _displayMinutes ..  ]
+"34
+[; ;../rtcbutton.c: 34:   }
+}
+[e :U 84 ]
+"35
+[; ;../rtcbutton.c: 35:  } else {
+}
+[e $U 87  ]
+[e :U 83 ]
+{
+"36
+[; ;../rtcbutton.c: 36:   lowCount = 0;
+[e = _lowCount -> -> 0 `i `uc ]
+"37
+[; ;../rtcbutton.c: 37:   lowerTimer = 1;
+[e = _lowerTimer -> -> 1 `i `uc ]
+"38
+[; ;../rtcbutton.c: 38:  }
+}
+[e :U 87 ]
+"40
+[; ;../rtcbutton.c: 40:  if ( !RA5 ) {
+[e $ ! ! _RA5 88  ]
+{
+"41
+[; ;../rtcbutton.c: 41:   if ( !--upperTimer ) {
+[e $ ! ! != -> =- _upperTimer -> -> 1 `i `uc `i -> 0 `i 89  ]
+{
+"42
+[; ;../rtcbutton.c: 42:    rtcStop();
+[e ( _rtcStop ..  ]
+"43
+[; ;../rtcbutton.c: 43:    rtcBumpHour();
+[e ( _rtcBumpHour ..  ]
+"44
+[; ;../rtcbutton.c: 44:    upperTimer = 150;
+[e = _upperTimer -> -> 150 `i `uc ]
+"45
+[; ;../rtcbutton.c: 45:    setHours();
+[e ( _setHours ..  ]
+"46
+[; ;../rtcbutton.c: 46:    displayHours();
+[e ( _displayHours ..  ]
+"47
+[; ;../rtcbutton.c: 47:   }
+}
+[e :U 89 ]
+"48
+[; ;../rtcbutton.c: 48:  } else {
+}
+[e $U 90  ]
+[e :U 88 ]
+{
+"49
+[; ;../rtcbutton.c: 49:   upperTimer = 1;
+[e = _upperTimer -> -> 1 `i `uc ]
+"50
+[; ;../rtcbutton.c: 50:  }
+}
+[e :U 90 ]
+"51
+[; ;../rtcbutton.c: 51: }
+[e :UE 82 ]
+}
+"54
+[; ;../rtcbutton.c: 54: initButtons() {
+[v _initButtons `(v ~T0 @X0 1 ef ]
+{
+[e :U _initButtons ]
+[f ]
+"55
+[; ;../rtcbutton.c: 55:  TRISA4 = 1;
+[e = _TRISA4 -> -> 1 `i `b ]
+"56
+[; ;../rtcbutton.c: 56:  TRISA5 = 1;
+[e = _TRISA5 -> -> 1 `i `b ]
+"57
+[; ;../rtcbutton.c: 57:  TRISA2 = 1;
+[e = _TRISA2 -> -> 1 `i `b ]
+"58
+[; ;../rtcbutton.c: 58: }
+[e :UE 91 ]
+}

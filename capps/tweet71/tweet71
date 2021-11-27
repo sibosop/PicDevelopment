@@ -1,0 +1,332 @@
+HI-TECH Software PICC Compiler V8.00PL3
+
+Linker command line:
+
+-z -Mtweet71 -ol.obj \
+  -ppowerup=0,intentry=4,intcode,intret,init,end_init,clrtext,stringtable,pstrings,strings \
+  -pintsave_0=0Ch -ABANK0=0Ch-02Fh \
+  -prbit_0=BANK0,rbss_0=BANK0,rdata_0=BANK0,idata_0=CODE -ACOMBANK=0Ch-02Fh \
+  -ptemp=COMBANK -ACODE=0-03FFh -ACONST=0-0FFhx4 -pconfig=2007h \
+  -pidloc=2000h -AEEDATA=2100h-21FFh -peeprom_data=EEDATA \
+  -pfloat_text0=CODE,float_text1=CODE,float_text2=CODE \
+  -pfloat_text3=CODE,float_text4=CODE -pnvram=BANK0,nvram_1=BANK1 \
+  -pnvbit_0=BANK0,nvbit_1=BANK1 -Q16C71 -h+tweet71.sym -ver=PICC#V8.00PL3 \
+  C:\HT-PIC\LIB\picrt40a.obj tweet71.obj ../c71lib/c71.lib \
+  C:\HT-PIC\LIB\pic40a-c.lib 
+
+Object code version is 3.7
+
+Machine type is 16C71
+
+Call graph:
+
+*_main size 0,0 offset 0
+     _initInterrupt size 1,1 offset 0
+     _initRandom->_mixRandom
+     _initA2D
+     _initTimers size 0,1 offset 0
+     _init->_setTimer size 2,1 offset 1
+     _initVoc
+     _checkTimers size 0,1 offset 0
+     _timerReady size 0,1 offset 1
+     _checkA2D
+     _checkPud size 0,0 offset 0
+         _timerReady size 0,1 offset 1
+         _doPudWait->_setTimer size 2,1 offset 1
+         _playNext size 0,0 offset 0
+             _setTimer size 2,1 offset 1
+             _setupNextMsg->_random size 4,0 offset 1
+                 _mixRandom
+                 lwmod
+     _playNext size 0,0 offset 0
+         _setTimer size 2,1 offset 1
+         _setupNextMsg->_setupNextMsg size 0,0 offset 1
+             _random size 4,0 offset 1
+                 _mixRandom
+                 lwmod
+     _doStop->_doPudReset->_doPudWait->_doPudWait size 0,0 offset 1
+         _setTimer size 2,1 offset 1
+     _doPudReset->_doPudReset size 0,0 offset 1
+         _doPudWait->_doPudWait size 0,0 offset 1
+             _setTimer size 2,1 offset 1
+*    _checkVoc size 0,1 offset 0
+         _setTimer size 2,1 offset 1
+         _doStop->_doStop size 0,0 offset 1
+             _doPudReset->_doPudReset size 0,0 offset 1
+                 _doPudWait->_doPudWait size 0,0 offset 1
+                     _setTimer size 2,1 offset 1
+         _timerReady size 0,1 offset 1
+*        _setupNextMsg->_setupNextMsg size 0,0 offset 1
+*            _random size 4,0 offset 1
+*                _mixRandom
+*                lwmod
+         _getA2D size 0,1 offset 1
+         _doPudReset->_doPudReset size 0,0 offset 1
+             _doPudWait->_doPudWait size 0,0 offset 1
+                 _setTimer size 2,1 offset 1
+*_interruptHandler
+
+		Name          Link     Load   Length Selector Space Scale
+C:\HT-PIC\LIB\picrt40a.obj
+		end_init        2A       2A        2       8     0
+tweet71.obj     rbss_0           F        F        A       C     1
+		temp            21       21        1      21     1
+		rbit_0          68        D        A       C     1    8
+		text0          1F1      1F1        E     3E2     0
+		text1          1FF      1FF       11     3FE     0
+		text2          2A9      2A9       1F     552     0
+		text3          1D5      1D5        8     3AA     0
+		text4          28D      28D       1C     51A     0
+		text5          25D      25D       17     4BA     0
+		text6          1CF      1CF        6     39E     0
+		text7          1C9      1C9        6     392     0
+		text8          315      315       39     62A     0
+		text9          34E      34E       39     69C     0
+		const1          35       35        2      66     0
+		const2          33       33        2      66     0
+
+../c71lib/c71.lib
+a2d.obj         rbss_0          19       19        2       C     1
+		temp            21       21        1      21     1
+		text0          247      247       16     48E     0
+		text1          387      387       3F     70E     0
+		text2          1DD      1DD        8     3BA     0
+inter.obj       rbss_0          1B       1B        1       C     1
+		intcode          8        8       15       8     0
+		intret          1D       1D        5       8     0
+		intentry         4        4        4       8     0
+		intsave_0        C        C        1       C     1
+		intsave         2A       2A        1      28     1
+		text1          210      210       11     420     0
+random.obj      nvram           28       28        2      28     1
+		temp            21       21        4      21     1
+		rbit_0          72        F        1       C     1    8
+		text0          1C3      1C3        6     386     0
+		text1          274      274       19     4E8     0
+		text2          2EE      2EE       27     5DC     0
+timers.obj      temp            21       21        2      21     1
+		text0          233      233       14     466     0
+		text1          2C8      2C8       26     590     0
+		text2          221      221       12     442     0
+		text3          1E5      1E5        C     3CA     0
+
+C:\HT-PIC\LIB\pic40a-c.lib
+clrbit0.obj     init            22       22        4       8     0
+clrbank0.obj    init            26       26        4       8     0
+powerup.obj     powerup          0        0        4       0     0
+wdiv.obj        temp            21       21        7      21     1
+		float_tex      3C6      3C6       3A     78C     0
+clr.obj         clrtext         2C       2C        7       8     0
+btemp0.obj      temp            21       21        1      21     1
+btemp1.obj      temp            21       21        2      21     1
+btemp2.obj      temp            21       21        3      21     1
+btemp3.obj      temp            21       21        4      21     1
+btemp4.obj      temp            21       21        5      21     1
+btemp5.obj      temp            21       21        6      21     1
+btemp6.obj      temp            21       21        7      21     1
+
+COMMON          rbss_0          1C       1C        5       C     1
+
+TOTAL		Name          Link     Load   Length
+	CLASS	BANK0    
+		rbss_0           F        F       12
+		nvram           28       28        2
+		temp            21       21        7
+		rbit_0          68        D        B
+		intsave_0        C        C        1
+		intsave         2A       2A        1
+
+	CLASS	COMBANK  
+
+	CLASS	CODE     
+		powerup          0        0        4
+		intcode          8        8       15
+		intret          1D       1D        5
+		intentry         4        4        4
+		init            22       22        8
+		end_init        2A       2A        2
+		clrtext         2C       2C        7
+		float_tex      3C6      3C6       3A
+		text0          1F1      1F1        E
+		text1          1FF      1FF       11
+		text2          2A9      2A9       1F
+		text3          1D5      1D5        8
+		text4          28D      28D       1C
+		text5          25D      25D       17
+		text6          1CF      1CF        6
+		text7          1C9      1C9        6
+		text8          315      315       39
+		text9          34E      34E       39
+		text0          247      247       16
+		text1          387      387       3F
+		text2          1DD      1DD        8
+		text1          210      210       11
+		text0          1C3      1C3        6
+		text1          274      274       19
+		text2          2EE      2EE       27
+		text0          233      233       14
+		text1          2C8      2C8       26
+		text2          221      221       12
+		text3          1E5      1E5        C
+
+	CLASS	CONST    
+		const1          35       35        2
+		const2          33       33        2
+
+	CLASS	EEDATA   
+
+	CLASS	CONFIG   
+
+	CLASS	IDLOC    
+
+	CLASS	BANK1    
+
+	CLASS	BANK2    
+
+	CLASS	BANK3    
+
+	CLASS	STRING   
+
+	CLASS	ENTRY    
+
+
+
+SEGMENTS	Name		Load	Length	 Top	Selector    Space Class
+
+		powerup         000000	000004	000004	       0       0  CODE  
+		intentry        000004	00002F	000033	       8       0  CODE  
+		intsave_0       00000C	000015	000021	       C       1  BANK0 
+		temp            000021	000007	000028	      21       1  COMBAN
+		nvram           000028	000003	00002B	      28       1  BANK0 
+		const2          000033	000004	000037	      66       0  CONST 
+		text0           0001C3	000006	0001C9	     386       0  CODE  
+		text7           0001C9	000006	0001CF	     392       0  CODE  
+		text6           0001CF	000006	0001D5	     39E       0  CODE  
+		text3           0001D5	000008	0001DD	     3AA       0  CODE  
+		text2           0001DD	000008	0001E5	     3BA       0  CODE  
+		text3           0001E5	00000C	0001F1	     3CA       0  CODE  
+		text0           0001F1	00000E	0001FF	     3E2       0  CODE  
+		text1           0001FF	000011	000210	     3FE       0  CODE  
+		text1           000210	000011	000221	     420       0  CODE  
+		text2           000221	000012	000233	     442       0  CODE  
+		text0           000233	000014	000247	     466       0  CODE  
+		text0           000247	000016	00025D	     48E       0  CODE  
+		text5           00025D	000017	000274	     4BA       0  CODE  
+		text1           000274	000019	00028D	     4E8       0  CODE  
+		text4           00028D	00001C	0002A9	     51A       0  CODE  
+		text2           0002A9	00001F	0002C8	     552       0  CODE  
+		text1           0002C8	000026	0002EE	     590       0  CODE  
+		text2           0002EE	000027	000315	     5DC       0  CODE  
+		text8           000315	000039	00034E	     62A       0  CODE  
+		text9           00034E	000039	000387	     69C       0  CODE  
+		text1           000387	00003F	0003C6	     70E       0  CODE  
+		float_text1     0003C6	00003A	000400	     78C       0  CODE  
+
+
+UNUSED ADDRESS RANGES
+
+	BANK0            002B-002F
+	CODE             0037-01C2
+	COMBANK          002B-002F
+	CONST            0037-01C2
+	EEDATA           2100-21FF
+
+                                  Symbol Table
+
+?_initInterrupt   rbss_0      001C  ?_random          rbss_0      001D
+?_setTimer        rbss_0      001D  ?a_checkTimers    rbss_0      001C
+?a_checkVoc       rbss_0      001C  ?a_getA2D         rbss_0      001D
+?a_initInterrupt  rbss_0      001D  ?a_initTimers     rbss_0      001C
+?a_setTimer       rbss_0      001F  ?a_timerReady     rbss_0      001D
+_A2DChan          rbss_0      0019  _A2DState         rbss_0      001A
+_A2DVals          rbss_0      0013  _Timers           rbss_0      0015
+__Bnvbit_0        nvbit_0     002A  __Bnvbit_1        nvbit_1     002A
+__Bnvbit_2        nvbit_2     002A  __Bnvbit_3        nvbit_3     002A
+__Brbit_0         rbit_0      000D  __Brbit_1         rbit_1      002A
+__Brbit_2         rbit_2      002A  __Brbit_3         rbit_3      002A
+__H__Z15351RS_    __Z15351RS_ 002A  __Hclrtext        clrtext     0033
+__Hcode           code        002A  __Hcommon_ram     common_ram  002A
+__Hconfig         config      2007  __Heeprom_data    eeprom_data 2100
+__Hend_init       end_init    002C  __Hfloat_text0    float_text0 0033
+__Hfloat_text1    float_text1 0400  __Hfloat_text2    float_text2 0033
+__Hfloat_text3    float_text3 0033  __Hfloat_text4    float_text4 0033
+__Hidata_0        idata_0     0033  __Hidata_1        idata_1     002A
+__Hidata_2        idata_2     002A  __Hidata_3        idata_3     002A
+__Hidloc          idloc       2000  __Hinit           init        002A
+__Hintcode        intcode     001D  __Hintentry       intentry    0008
+__Hintret         intret      0022  __Hintsave        intsave     002A
+__Hintsave_0      intsave_0   000D  __Hintsave_1      intsave_1   002A
+__Hintsave_2      intsave_2   002A  __Hintsave_3      intsave_3   002A
+__Hnvbit_0        nvbit_0     0150  __Hnvbit_1        nvbit_1     0150
+__Hnvbit_2        nvbit_2     0150  __Hnvbit_3        nvbit_3     0150
+__Hnvram          nvram       002A  __Hnvram_1        nvram_1     002A
+__Hnvram_2        nvram_2     002A  __Hnvram_3        nvram_3     002A
+__Hpowerup        powerup     0004  __Hpstrings       pstrings    0033
+__Hrbit_0         rbit_0      0073  __Hrbit_1         rbit_1      0150
+__Hrbit_2         rbit_2      0150  __Hrbit_3         rbit_3      0150
+__Hrbss_0         rbss_0      0021  __Hrbss_1         rbss_1      002A
+__Hrbss_2         rbss_2      002A  __Hrbss_3         rbss_3      002A
+__Hrdata_0        rdata_0     0021  __Hrdata_1        rdata_1     002A
+__Hrdata_2        rdata_2     002A  __Hrdata_3        rdata_3     002A
+__Hstrings        strings     0033  __Hstringtable    stringtable 0033
+__Hstruct         struct      002B  __Htemp           temp        0028
+__Htext           text        002A  __Hvectors        vectors     0037
+__L__Z15351RS_    __Z15351RS_ 002A  __Lclrtext        clrtext     002C
+__Lcode           code        002A  __Lcommon_ram     common_ram  002A
+__Lconfig         config      2007  __Leeprom_data    eeprom_data 2100
+__Lend_init       end_init    002A  __Lfloat_text0    float_text0 0033
+__Lfloat_text1    float_text1 03C6  __Lfloat_text2    float_text2 0033
+__Lfloat_text3    float_text3 0033  __Lfloat_text4    float_text4 0033
+__Lidata_0        idata_0     0033  __Lidata_1        idata_1     002A
+__Lidata_2        idata_2     002A  __Lidata_3        idata_3     002A
+__Lidloc          idloc       2000  __Linit           init        0022
+__Lintcode        intcode     0008  __Lintentry       intentry    0004
+__Lintret         intret      001D  __Lintsave        intsave     002A
+__Lintsave_0      intsave_0   000C  __Lintsave_1      intsave_1   002A
+__Lintsave_2      intsave_2   002A  __Lintsave_3      intsave_3   002A
+__Lnvbit_0        nvbit_0     0150  __Lnvbit_1        nvbit_1     0150
+__Lnvbit_2        nvbit_2     0150  __Lnvbit_3        nvbit_3     0150
+__Lnvram          nvram       0028  __Lnvram_1        nvram_1     002A
+__Lnvram_2        nvram_2     002A  __Lnvram_3        nvram_3     002A
+__Lpowerup        powerup     0000  __Lpstrings       pstrings    0033
+__Lrbit_0         rbit_0      0068  __Lrbit_1         rbit_1      0150
+__Lrbit_2         rbit_2      0150  __Lrbit_3         rbit_3      0150
+__Lrbss_0         rbss_0      000F  __Lrbss_1         rbss_1      002A
+__Lrbss_2         rbss_2      002A  __Lrbss_3         rbss_3      002A
+__Lrdata_0        rdata_0     0021  __Lrdata_1        rdata_1     002A
+__Lrdata_2        rdata_2     002A  __Lrdata_3        rdata_3     002A
+__Lstrings        strings     0033  __Lstringtable    stringtable 0033
+__Lstruct         struct      002B  __Ltemp           temp        0021
+__Ltext           text        002A  __Lvectors        vectors     0037
+__S0              (abs)       2100  __S1              (abs)       002B
+_checkA2D         text1       0387  _checkPud         text5       025D
+_checkTimers      text1       02C8  _checkVoc         text8       0315
+_countMsg         rbit_0      0068  _curMsg           rbss_0      000F
+_doPudReset       text6       01CF  _doPudWait        text3       01D5
+_doStop           text7       01C9  _exit             init        0022
+_getA2D           text2       01DD  _init             text0       01F1
+_initA2D          text0       0247  _initFlag         rbit_0      0069
+_initInterrupt    text1       0210  _initRandom       text0       01C3
+_initTimers       text0       0233  _initVoc          text1       01FF
+_interruptHandler text0       0037  _last             rbit_0      0072
+_loopCnt          rbss_0      0010  _main             text9       034E
+_maxMsg           rbss_0      0011  _milli            rbss_0      001B
+_mixRandom        text1       0274  _msgLookup        rbit_0      006A
+_msgNum           rbss_0      0012  _numA2DChannels   const1      0036
+_numTimers        const2      0034  _oneKhz           rbit_0      006B
+_pinInt           rbit_0      006C  _playNext         text4       028D
+_pudReset         rbit_0      006D  _pudWait          rbit_0      006E
+_random           text2       02EE  _randomMsg        rbit_0      006F
+_ranval           nvram       0028  _running          rbit_0      0070
+_setTimer         text3       01E5  _setupNextMsg     text2       02A9
+_sleepFlag        rbit_0      0071  _timerReady       text2       0221
+clear_bank0       init        0026  clear_bit0        init        0022
+clear_ram         clrtext     002F  dowdiv            float_text1 03C7
+int_entry         intentry    0004  int_func          intcode     0008
+int_restore       intret      001D  intlevel0         intentry    0004
+intlevel1         intentry    0004  lwdiv             float_text1 03C6
+lwmod             float_text1 03C6  powerup           powerup     0000
+start             init        0022  used_btemp0       (abs)       0001
+used_btemp1       (abs)       0001  used_btemp2       (abs)       0001
+used_btemp3       (abs)       0001  used_btemp4       (abs)       0001
+used_btemp5       (abs)       0001  used_btemp6       (abs)       0001

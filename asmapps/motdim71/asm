@@ -1,0 +1,9 @@
+a2d.LST:0004   1683           00035         banksel TRISA           ; set A to A0-1 inputs, A2-A3 out A4 in
+a2d.LST:0006   0085           00037         movwf   TRISA           ; 
+a2d.LST:TRISA                             00000085
+a2d.asm:	banksel	TRISA		; set A to A0-1 inputs, A2-A3 out A4 in
+a2d.asm:	movwf	TRISA		; 
+inter.LST:TRISA                             00000085
+math.LST:TRISA                             00000085
+startup.LST:TRISA                             00000085
+timers.LST:TRISA                             00000085

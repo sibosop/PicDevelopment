@@ -1,0 +1,4 @@
+
+#define INIT_TIMER	0
+#define DIMMER_TIMER	INIT_TIMER
+#define INPUT_TIMER	1

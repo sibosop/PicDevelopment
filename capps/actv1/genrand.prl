@@ -1,0 +1,35 @@
+#
+
+print	"/* auto generated file, do not edit */\n\n\n",
+		"#include <pic.h>\n",
+		"#include <sys.h>\n",
+		"#include \"types.h\"\n",
+		"\n",
+		"UInt16 counter = 0;\n",
+		"const UInt16 randtable[] = \n",
+		"{";
+
+for ( $i = 0; $i < 160; ++$i )
+{
+	if ( !($i % 4) )
+	{
+		print "\n";
+	}
+	$v = int(rand() * 0x10000);
+	print "\t$v,";
+}
+
+print "\n};\n\n\n\n",
+	"UInt16\n",
+	"getGenRand(UInt16 low, UInt16 high)\n",
+	"{\n",
+	"\tUInt16 rval = randtable[counter];\n",
+	"\trval = rval % (high - low);\n",
+	"\trval = rval + low;\n",
+	"\tif ( ++counter > (sizeof(randtable)/sizeof(UInt16)))\n",
+	"\t\tcounter = 0;\n",
+	"\treturn rval;\n",
+	"}\n";
+		
+
+

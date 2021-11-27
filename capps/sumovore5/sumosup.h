@@ -1,0 +1,93 @@
+#ifndef SUMOSUP_H
+#define SUMOSUP_H
+#include "types.h"
+
+void initSumo();		
+void checkIr();
+void initPwm();
+void avoidObject();
+void moveFromEdge();
+void checkSpeed();
+int	edgeDetected();
+int objectDetected();
+
+#define IRL 1
+#define IRR 2
+UInt8	irOn(UInt8);
+void initIr();
+
+#define	IR_MID		RA4
+#define IR_LEFT		RD5
+#define IR_RIGHT	RD6
+
+#define	BLACK_THRESHOLD		190
+#define RIGHT_MOTOR	1
+#define LEFT_MOTOR  2
+
+
+
+
+
+#define HEARTBEAT_LED	RB5
+#define DIAG_LED1		RB4
+#define DIAG_LED2		RD1
+#define	DIAG_LED3		RD0
+
+#define LEFT_MOTOR_ON	RC1=1;
+#define LEFT_MOTOR_OFF	RC1=0;
+#define RIGHT_MOTOR_ON	RC2=1;
+#define RIGHT_MOTOR_OFF	RC2=0;
+
+#define FORWARD	1
+#define BACKWARD 0
+
+#define LEFT_MOTOR_DIR	RC3
+#define RIGHT_MOTOR_DIR	RC4
+
+#define LEFT_MOTOR_FORWARD	LEFT_MOTOR_DIR=FORWARD
+#define LEFT_MOTOR_BACKWARD	LEFT_MOTOR_DIR=BACKWARD
+#define RIGHT_MOTOR_FORWARD	RIGHT_MOTOR_DIR=FORWARD
+#define RIGHT_MOTOR_BACKWARD RIGHT_MOTOR_DIR=BACKWARD
+
+#define SUMO_GO		LEFT_MOTOR_ON;RIGHT_MOTOR_ON
+#define	SUMO_STOP	LEFT_MOTOR_OFF;RIGHT_MOTOR_OFF
+
+#define SUMO_FORWARD \
+	LEFT_MOTOR_FORWARD; \
+	RIGHT_MOTOR_FORWARD; \
+	SUMO_GO
+
+#define SUMO_BACKWARD \
+	LEFT_MOTOR_BACKWARD; \
+	RIGHT_MOTOR_BACKWARD; \
+	SUMO_GO
+
+#define SUMO_ROTATE_LEFT \
+	LEFT_MOTOR_BACKWARD \
+	RIGHT_MOTOR_FORWARD \
+	SUMO_GO
+
+#define SUMO_ROTATE_RIGHT \
+	RIGHT_MOTOR_BACKWARD \
+	LEFT_MOTOR_FORWARD \
+	SUMO_GO
+
+enum Timers {
+	HeartbeatTimer,
+	SpeedTimerLeft,
+	SpeedTimerRight,
+	MaxTimers
+};
+
+#define SLOWEST_SPEED	(UInt16)0x160
+#define FASTEST_SPEED	(UInt16)0x3FF
+#define MEDIUM_SPEED	(UInt16)((SLOWEST_SPEED+FASTEST_SPEED)/2)
+
+#define NORMAL_SPEED	MEDIUM_SPEED
+
+#define FAST_INTERVAL	1
+#define SLOW_INTERVAL	500
+#define DEFAULT_SPEED_INTERVAL	FAST_INTERVAL
+#define RIGHT_SPEED 0
+#define LEFT_SPEED	1
+#endif

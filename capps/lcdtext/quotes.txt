@@ -1,0 +1,37 @@
+Time makes more converts than reason.
+Time is a dressmaker specializing in alterations. 
+Time is a great teacher, but unfortunately it kills all its pupils.
+Time heals all wounds, unless you pick at them. 
+Comedy is tragedy plus time 
+Doing a thing well is often a waste of time.
+Time may be a great healer, but it's a lousy beautician 
+Time flies like the wind. Fruit flies like bananas. 
+Time is an illusion. Lunchtime doubly so.
+There is never enough time, unless you're serving it.
+So little time and so little to do.
+People find life entirely too time-consuming.
+#universal time (UT, UT1): the time since in the Greenwich time zone. 24 universal hours are a mean solar day. UT can only be deduced from observations. Universal Time is tied to the rotation of the Earth, and the Earth's rotation rate is rather irregular, thus unpredictable. Only after the observations of star transits can Universal Time be deduced. Once known, UT can be compared with known ephemeris time, and can be derived. UT is always kept within 0.9 seconds of UTC (what WWV and other time broadcast services provide) by the insertion or deletion of leap second, usually at 23:59:59 UTC on either June 30 or December 31.
+Lost, yesterday, somewhere between Sunrise and Sunset, two golden hours, each set with sixty diamond minutes. No reward is offered, for they are gone forever.
+Day, n. A period of twenty-four hours, mostly misspent.  
+I wasted time, and now doth time waste me. 
+We must use time as a tool, not as a couch.
+The trouble with our times is that the future is not what it used to be.
+Better late than before anybody has invited you.
+#barycentric dynamical time (TDB): dynamical time for barycentric phenomena which replaced Ephemeris Time when the IAU 1976 System of Astronomical Constants was implemented in the Astronomical Almanac in 1984. The difference between TDT and TDB is due to variations in the gravitational potential around earths orbit, and is always less than 2 milliseconds. It is used as a time scale of ephemerides referred to the barycenter of the solar system.
+ephemeris time (ET): a uniform time measure now kept by atomic clocks. Ephemeris Time was used in the Astronomical Almanac from 1960-1983, but was replaced by Barycentric Dynamical Time when the IAU 1976 System of Astronomical Constants was implemented in the Astronomical Almanac in 1984.
+#mean solar time: a time based on a hypothetical sun moving uniformly along the celestial equator. The fluctuations have ranged between 30 seconds over the last 300 years.
+Greenwich apparent sidereal time (GAST): Greenwich hour angle of the true equinox of date
+Greenwich mean sidereal time (GMST): Greenwich hour angle (GWA) of the mean equinox of date
+international atomic time (TAI): measured in the SI second
+terrestrial dynamical time (TDT): dynamical time for geocentric phenomena which replaced Ephemeris Time when the IAU 1976 System of Astronomical Constants was implemented in the Astronomical Almanac in 1984. It is used as the time scale of ephemerides for observations from Earth's surface.
+coordinated universal time (UTC): differs from TAI by an integral number of seconds and is the basis of most radio time systems and legal time systems. The step adjustments are usually inserted after the 60th second of the last minute of December 31 or June 30.
+universal time UT0: a local approximation to universal time not corrected to polar motion.
+Time goes, you say? Ah, no! Alas, Time stays, we go.
+What then is time? If no one asks me, I know what it is. If I wish to explain it to him who asks, I do not know. 
+Time is God's way of keeping everything from happening at once 
+Virtually all modern spacetime theories are now built in the same way. The theory posits a manifold of events and then assigns further structures to those events to represent the content of spacetime.
+imagine all the curves in some spacetime and an exhaustive catalog of all the distances in space and duration elapsed in time between any two events on any curve that connects them. The information carried by the metric is just that catalog, reduced to a very much more compact form.
+To physicists, time is defined by quantum mechanics.
+Since the observers are inside the universe itself, we must formulate a \"background-independent\" quantum theory of gravity and cosmology , as well as the notions of time and change, to apply to a system with no fixed background, which contains all its possible observers--perhaps even one in which the laws themselves evolve as the universe does.
+General relativity taught us that time and space are parts of the dynamical system of the world, that do themselves change and evolve in time.
+Scientists have not discovered any flow of time in nature. This flow is a product of our conditioning, and is under our control.
