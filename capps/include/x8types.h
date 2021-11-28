@@ -17,7 +17,7 @@ extern "C" {
 #define bank2 __bank(2)
 #define bank3 __bank(3)
 #define Boolean __bit
-
+#define interrupt __interrupt()
 
 #ifdef	__cplusplus
 }

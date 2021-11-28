@@ -1,6 +1,6 @@
 #include <pic.h>
 // #include <sys.h>
-#include "types.h"
+//#include "types.h"
 
 #include "rtclock.h"
 #include "nixie74141.h"
@@ -94,7 +94,7 @@ init()
 	TRISA = 0x00;
 	PORTA = 0;
 	PORTB = 0;
-	OPTION = 0x8F;	// divide wdt by 2 disable pullups
+	OPTION_REG = 0x8F;	// divide wdt by 2 disable pullups
 	PEIE = 0;		// disable extra peripheral interrupt
 	SSPEN = 0;		// disable sync serial port
 	INTEDG = 1;

@@ -28,9 +28,9 @@ void rtcInit() {
 //	SSPIE = 1;	// enable serial port interrupt
 	GIE = 1;	// enable general interrupts
 	PIE1 = 1;	// enable peripheral interrupt
-	STAT_SMP = 0; // sample at data edge
+	SMP = 0; // sample at data edge
 	CKP = 0; // clock on rising edge
-	STAT_CKE = 0;
+	CKE = 0;
 	clockBankIndex = 0;
 	addrFlag = 1;
 	rtcWrite(0xe,0x48);
@@ -44,18 +44,19 @@ void rtcInit() {
 }
 uint8_t 
 bcd2Bin(uint8_t v) {
-	return (((v >> 4)*10) + (v & 0xf));
+	return ((uint8_t)(((v >> 4)*10) + (v & 0xf)));
 }
 
 uint8_t
 bin2Bcd(uint8_t v) {
-	return ((v / 10) << 4) + (v % 10);
+	return ((uint8_t)((v / 10) << 4) + (v % 10));
 }
-
+#if 0
 uint8_t	
 rtcVal(uint8_t i) {
 	return clockBank[i];
 }
+#endif
 
 
 
@@ -88,7 +89,7 @@ uint8_t rtcCheck() {
 			break;
 
 		case AddrWait:
-			if (STAT_BF) {
+			if (BF) {
 				RTC_MSO_DIR = 1;
 				SSPBUF = 0;
 				RTC_MSO_DIR = 0;
@@ -97,7 +98,7 @@ uint8_t rtcCheck() {
 			break;
 
 		case ReadyWait:
-			if ( STAT_BF ) 
+			if ( BF ) 
 				rtcState = ReadData;	
 			break;
 		case ReadData:
@@ -128,10 +129,11 @@ void rtcStop() {
 	rtcState = Idle;
 	rtcStopCount = 4;
 }
-
+#if 0
 void rtcRestart() {
 	rtcState = InitStart;
 }
+#endif
 
 uint8_t 
 rtcRead(uint8_t addr) {
@@ -140,7 +142,7 @@ rtcRead(uint8_t addr) {
 	RTC_CHIP_SELECT = 0;
 	// Write the addr
 	SSPBUF = addr;	
-	while ( !STAT_BF ) {
+	while ( !BF ) {
 	}
 
 	// Initiate a read by
@@ -150,7 +152,7 @@ rtcRead(uint8_t addr) {
 	// data 
 	RTC_MSO_DIR = 1;
 	SSPBUF = 0;
-	while( !STAT_BF ) {
+	while( !BF ) {
 	}		
 	rval = SSPBUF;
 	RTC_CHIP_SELECT = 1;
@@ -162,11 +164,11 @@ rtcWrite(uint8_t addr, uint8_t data) {
 	RTC_MSO_DIR = 0;
 	RTC_CHIP_SELECT = 0;
 	SSPBUF = addr | 0x80;
-	while( !STAT_BF ) {
+	while( !BF ) {
 	}
 	addr= SSPBUF;
 	SSPBUF = data;
-	while( !STAT_BF ) {
+	while( !BF ) {
 	}
 	addr = SSPBUF;
 	RTC_CHIP_SELECT = 1;
@@ -191,7 +193,7 @@ uint8_t
 rtcIsPm() {
 	return (clockBank[RTC_HOUR_REG] & RTC_AM_PM_BIT) != 0;
 }
-
+#if 0
 uint8_t
 rtcGetWeekday() {
 	return clockBank[RTC_WEEKDAY_REG];
@@ -216,8 +218,9 @@ uint8_t
 rtcGetCentury() {
 	return 0x20;
 }
+#endif
 
-const uint8_t const dateTab[] = {
+const uint8_t dateTab[] = {
 	0
 	,31  //Jan
 	,0
@@ -232,6 +235,8 @@ const uint8_t const dateTab[] = {
 	,30  //Nov
 	,31  //Dec
 };
+
+#if 0
 void
 rtcBumpDate() {
 	uint8_t	y = bcd2Bin(rtcGetYear());
@@ -249,13 +254,14 @@ rtcBumpDate() {
 	rtcWrite(RTC_DATE_REG,d);
 	clockBank[RTC_DATE_REG] = d;
 }
+#endif
 
 void
 rtcClearSec() {
 	rtcWrite(RTC_SEC_REG,0);
 	clockBank[RTC_SEC_REG]=0;
 }
-
+#if 0
 void
 rtcBumpMon() {
 	uint8_t	m = bcd2Bin(rtcGetMon());
@@ -286,6 +292,7 @@ rtcBumpYear() {
 	rtcWrite(RTC_YEAR_REG,y);
 	clockBank[RTC_YEAR_REG] = y;
 }
+#endif
 void
 rtcBumpMin() {
 	uint8_t lo,hi;		

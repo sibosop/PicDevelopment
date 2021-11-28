@@ -9,11 +9,11 @@
 #define RTC_12_HOUR_BIT	0x40
 #define RTC_AM_PM_BIT	0x20
 #define CLOCK_BANK_SIZE	0x0F
-void rtcInit();
+void rtcInit(void);
 void rtcWrite(uint8_t data, uint8_t addr);
 uint8_t rtcRead(uint8_t addr);
-void rtcInterrupt();
-void rtcStart();
+void rtcInterrupt(void);
+void rtcStart(void);
 uint8_t	rtcVal(uint8_t i);
 extern uint8_t	clockBankIndex;
 extern uint16_t	secCount;
@@ -23,26 +23,26 @@ extern Boolean	addrFlag;
 extern Boolean stopFlag;
 extern Boolean inProcess;
 
-uint8_t rtcCheck();
-uint8_t	rtcGetMin();
-uint8_t	rtcGetHour();
-uint8_t	rtcGetWeekday();
-uint8_t	rtcGetMon();
-uint8_t	rtcGetDate();
-uint8_t	rtcGetCentury();
-uint8_t	rtcGetYear();
-uint8_t	rtcIsPm();
-void	rtcStop();
-void 	rtcStart();
-void	rtcRestart();
-void	rtcBumpMin();
-void	rtcBumpHour();
-uint8_t	rtcGetSecond();
-void	rtcBumpYear();
-void	rtcBumpDate();
-void	rtcBumpMon();
-void	rtcBumpWeekday();
-void	rtcClearSec();
+uint8_t rtcCheck(void);
+uint8_t	rtcGetMin(void);
+uint8_t	rtcGetHour(void);
+uint8_t	rtcGetWeekday(void);
+uint8_t	rtcGetMon(void);
+uint8_t	rtcGetDate(void);
+uint8_t	rtcGetCentury(void);
+uint8_t	rtcGetYear(void);
+uint8_t	rtcIsPm(void);
+void	rtcStop(void);
+void 	rtcStart(void);
+void	rtcRestart(void);
+void	rtcBumpMin(void);
+void	rtcBumpHour(void);
+uint8_t	rtcGetSecond(void);
+void	rtcBumpYear(void);
+void	rtcBumpDate(void);
+void	rtcBumpMon(void);
+void	rtcBumpWeekday(void);
+void	rtcClearSec(void);
 uint8_t	bcd2Bin(uint8_t);
 #define	RTC_YEAR_REG	6
 #define RTC_MON_REG		5

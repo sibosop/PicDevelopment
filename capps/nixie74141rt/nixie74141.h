@@ -18,17 +18,17 @@
 extern uint16_t duty1;
 extern uint8_t nixieVals[4];
 
-void versionInit();
-void checkButtons();
-void initButtons();
+void versionInit(void);
+void checkButtons(void);
+void initButtons(void);
 
 extern uint8_t	hours;
 extern uint8_t	minutes;
 extern uint16_t 	seconds;
-extern void setMinutes();
-extern void setSeconds();
-extern void setHours();
-extern void displayHours();
-extern void displayMinutes();
-extern void displaySeconds();
+extern void setMinutes(void);
+extern void setSeconds(void);
+extern void setHours(void);
+extern void displayHours(void);
+extern void displayMinutes(void);
+extern void displaySeconds(void);
 #endif

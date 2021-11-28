@@ -1,5 +1,8 @@
 # Prerequisites
 *.d
+*.i
+*.p1
+private
 
 # Object files
 *.o
@@ -50,3 +53,4 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
+/capps/nixie74141rt/nixie74141rt.X/dist/
