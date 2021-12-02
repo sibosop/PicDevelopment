@@ -3,6 +3,7 @@
 *.i
 *.p1
 private
+.DS_store
 
 # Object files
 *.o
